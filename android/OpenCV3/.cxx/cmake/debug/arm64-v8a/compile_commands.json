@@ -1,0 +1,7 @@
+[
+{
+  "directory": "E:/Major Project/Project/android/OpenCV3/.cxx/cmake/debug/arm64-v8a",
+  "command": "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\ndk\\20.0.5594570\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/HP/AppData/Local/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/HP/AppData/Local/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot    -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\opencv_jni_shared.dir\\dummy.cpp.o -c \"E:\\Major Project\\Project\\android\\OpenCV3\\libcxx_helper\\dummy.cpp\"",
+  "file": "E:\\Major Project\\Project\\android\\OpenCV3\\libcxx_helper\\dummy.cpp"
+}
+]
