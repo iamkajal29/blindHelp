@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import ui.photoeditor.RNPhotoEditorPackage;
+//import com.reactnativecommunity.cameraroll.CameraRollPackage;
 import org.reactnative.camera.RNCameraPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
@@ -16,6 +18,7 @@ import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
 import android.util.Log;
+//import com.reactnativecommunity.cameraroll.CameraRollPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -33,6 +36,7 @@ public class MainApplication extends Application implements ReactApplication {
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           packages.add(new RNOpenCvLibraryPackage());
+//          packages.add(new CameraRollPackage());
           return packages;
         }
 

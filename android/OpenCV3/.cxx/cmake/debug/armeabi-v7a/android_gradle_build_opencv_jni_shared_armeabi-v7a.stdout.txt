@@ -1,2 +1,2 @@
-ninja: Entering directory `E:\Major Project\Project\android\OpenCV3\.cxx\cmake\debug\armeabi-v7a'
+ninja: Entering directory `C:\Users\apriy\Documents\MajorProject\blindHelp\android\OpenCV3\.cxx\cmake\debug\armeabi-v7a'
 ninja: no work to do.

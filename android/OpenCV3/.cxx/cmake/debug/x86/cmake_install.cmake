@@ -1,4 +1,4 @@
-# Install script for directory: E:/Major Project/Project/android/OpenCV3/libcxx_helper
+# Install script for directory: C:/Users/apriy/Documents/MajorProject/blindHelp/android/OpenCV3/libcxx_helper
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/Major Project/Project/android/OpenCV3/.cxx/cmake/debug/x86/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/apriy/Documents/MajorProject/blindHelp/android/OpenCV3/.cxx/cmake/debug/x86/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

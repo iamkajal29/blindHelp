@@ -2,25 +2,25 @@
   {
     "level": "INFO",
     "message": "Start JSON generation. Platform version: 16 min SDK version: x86",
-    "file": "E:\\Major Project\\Project\\android\\OpenCV3\\libcxx_helper\\CMakeLists.txt",
+    "file": "C:\\Users\\apriy\\Documents\\MajorProject\\blindHelp\\android\\OpenCV3\\libcxx_helper\\CMakeLists.txt",
     "tag": "debug|x86"
   },
   {
     "level": "INFO",
     "message": "No CMake version was specified in build.gradle. Using default version 3.10.2.",
-    "file": "E:\\Major Project\\Project\\android\\OpenCV3\\libcxx_helper\\CMakeLists.txt",
+    "file": "C:\\Users\\apriy\\Documents\\MajorProject\\blindHelp\\android\\OpenCV3\\libcxx_helper\\CMakeLists.txt",
     "tag": "debug|x86"
   },
   {
     "level": "INFO",
-    "message": "JSON \u0027E:\\Major Project\\Project\\android\\OpenCV3\\.cxx\\cmake\\debug\\x86\\android_gradle_build.json\u0027 was up-to-date",
-    "file": "E:\\Major Project\\Project\\android\\OpenCV3\\libcxx_helper\\CMakeLists.txt",
+    "message": "JSON \u0027C:\\Users\\apriy\\Documents\\MajorProject\\blindHelp\\android\\OpenCV3\\.cxx\\cmake\\debug\\x86\\android_gradle_build.json\u0027 was up-to-date",
+    "file": "C:\\Users\\apriy\\Documents\\MajorProject\\blindHelp\\android\\OpenCV3\\libcxx_helper\\CMakeLists.txt",
     "tag": "debug|x86"
   },
   {
     "level": "INFO",
     "message": "JSON generation completed without problems",
-    "file": "E:\\Major Project\\Project\\android\\OpenCV3\\libcxx_helper\\CMakeLists.txt",
+    "file": "C:\\Users\\apriy\\Documents\\MajorProject\\blindHelp\\android\\OpenCV3\\libcxx_helper\\CMakeLists.txt",
     "tag": "debug|x86"
   }
 ]

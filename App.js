@@ -1,7 +1,8 @@
 'use strict';
 import React, { PureComponent } from 'react';
-import { AppRegistry, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { AppRegistry, StyleSheet, Text, TouchableOpacity, View, CameraRoll } from 'react-native';
 import { RNCamera } from 'react-native-camera';
+import { RNPhotoEditor } from 'react-native-photo-editor';
 
 class App extends PureComponent {
   render() {
@@ -40,7 +41,16 @@ class App extends PureComponent {
     if (this.camera) {
       const options = { quality: 0.5, base64: true };
       const data = await this.camera.takePictureAsync(options);
+      const imgPath = data.uri.replace('file://', '');
+      RNPhotoEditor.Edit({
+              path: imgPath,
+              hiddenControls: [],
+              colors: undefined,
+            });
+//      CameraRoll.saveImageWithTag( data.uri )
+
       console.log(data.uri);
+      console.log(imgPath);
     }
   };
 }

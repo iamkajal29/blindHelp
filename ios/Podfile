@@ -79,6 +79,10 @@ target 'Project' do
 
   pod 'react-native-camera', :path => '../node_modules/react-native-camera'
 
+  pod 'react-native-cameraroll', :path => '../node_modules/@react-native-community/cameraroll'
+
+  pod 'RNPhotoEditor', :path => '../node_modules/react-native-photo-editor'
+
   target 'ProjectTests' do
     inherit! :complete
     # Pods for testing
