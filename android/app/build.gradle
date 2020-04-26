@@ -207,7 +207,8 @@ dependencies {
     debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.flipper'
     }
-    implementation project(path: ':OpenCV3')
+    implementation project(':react-native-svg')
+    implementation project(path: ':openCVLibrary310')
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";

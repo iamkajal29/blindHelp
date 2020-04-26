@@ -1,2 +1,0 @@
-ninja: Entering directory `E:\Major Project\Project\android\OpenCV3\.cxx\cmake\debug\arm64-v8a'
-ninja: no work to do.

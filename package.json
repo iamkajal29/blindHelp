@@ -14,6 +14,7 @@
     "react-native": "0.62.2",
     "react-native-camera": "^3.23.1",
     "react-native-fs": "^2.16.6",
+    "react-native-rectangle-scanner": "^1.0.10",
     "react-native-svg": "^12.1.0"
   },
   "devDependencies": {
