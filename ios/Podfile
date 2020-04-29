@@ -85,6 +85,10 @@ target 'Project' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'RNPdfScanner', :path => '../node_modules/@woonivers/react-native-document-scanner'
+
+  pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
+
   target 'ProjectTests' do
     inherit! :complete
     # Pods for testing
