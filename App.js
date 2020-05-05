@@ -78,6 +78,8 @@ import React, { useRef, useState, useEffect } from "react"
 import { View, StyleSheet, Text, TouchableOpacity, Image, Platform } from "react-native"
 import Permissions from 'react-native-permissions';
 import PDFScanner from "@woonivers/react-native-document-scanner"
+import { RNPhotoEditor } from 'react-native-photo-editor';
+
 
 export default function App() {
   const pdfScannerElement = useRef(null)
@@ -95,8 +97,16 @@ export default function App() {
   function handleOnPressRetry() {
     setData({})
   }
+  
   function handleOnPress() {
     pdfScannerElement.current.capture()
+    const imgPath = (data.croppedImage).replace('file://', '');
+    console.log("Image",imgPath)
+    RNPhotoEditor.Edit({
+      path: imgPath,
+      //hiddenControls: [],
+      //colors: undefined,
+    });
   }
   if (!allowed) {
     console.log("You must accept camera permission")
@@ -104,17 +114,31 @@ export default function App() {
       <Text>You must accept camera permission</Text>
     </View>)
   }
+  
+      
   if (data.croppedImage) {
-    console.log("data", data)
+    console.log("data", data);
+    
+    const imgPath = (data.croppedImage).replace('file://', '');
+    console.log("Image",imgPath)
+
+    RNPhotoEditor.Edit({
+      path: imgPath,
+      hiddenControls: [],
+      colors: undefined,
+    });
+    //setData({});
     return (
       <React.Fragment>
-        <Image source={{ uri: data.croppedImage }} style={styles.preview} />
+        <Image source={{uri: 'file://' + imgPath}} style={styles.preview} />
+        
         <TouchableOpacity onPress={handleOnPressRetry} style={styles.button}>
           <Text style={styles.buttonText}>Retry</Text>
         </TouchableOpacity>
       </React.Fragment>
     )
   }
+  
   return (
     <React.Fragment>
       <PDFScanner
@@ -126,6 +150,7 @@ export default function App() {
         quality={0.5}
         detectionCountBeforeCapture={5}
         detectionRefreshRateInMS={50}
+        //saveInAppDocument={true}
       />
       <TouchableOpacity onPress={handleOnPress} style={styles.button}>
         <Text style={styles.buttonText}>Take picture</Text>
