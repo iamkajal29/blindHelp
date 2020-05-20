@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import net.no_mad.tts.TextToSpeechPackage;
+import com.reactlibrary.RNTesseractOcrPackage;
 import com.reactnativecommunity.rnpermissions.RNPermissionsPackage;
 import com.documentscanner.DocumentScannerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;

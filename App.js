@@ -79,7 +79,8 @@ import { View, StyleSheet, Text, TouchableOpacity, Image, Platform } from "react
 import Permissions from 'react-native-permissions';
 import PDFScanner from "@woonivers/react-native-document-scanner"
 import { RNPhotoEditor } from 'react-native-photo-editor';
-
+import RNTesseractOcr from 'react-native-tesseract-ocr';
+import Tts from 'react-native-tts';
 
 export default function App() {
   const pdfScannerElement = useRef(null)
@@ -101,6 +102,7 @@ export default function App() {
   function handleOnPress() {
     pdfScannerElement.current.capture()
     const imgPath = (data.croppedImage).replace('file://', '');
+
     console.log("Image",imgPath)
     RNPhotoEditor.Edit({
       path: imgPath,
@@ -108,6 +110,37 @@ export default function App() {
       //colors: undefined,
     });
   }
+
+   function ocrRecognize() {
+        const tessOptions = {
+                whitelist: null,
+                blacklist: '\'!"#$%&()={}[]+*_:;<>@\.\\'
+                // blacklist:null
+              };
+
+        const imgPath = (data.croppedImage).replace('file://', '');
+              // const imgPath = '/storage/emulated/0/Download/menu_cropped.png'
+
+              RNTesseractOcr.recognize(imgPath, 'LANG_ENGLISH', tessOptions)
+                .then((result) => {
+//                  this.setState({ ocrResult: result });
+                  console.log("OCR Result: ", result);
+                  Tts.setDefaultLanguage('en-IN');
+                  Tts.setDefaultVoice('en-in-x-ahp#female_1-local');
+                  Tts.speak("hello world", {
+                    androidParams: {
+                      KEY_PARAM_PAN: -1,
+                      KEY_PARAM_VOLUME: 0.5,
+                      KEY_PARAM_STREAM: 'STREAM_MUSIC',
+                    },
+                  })
+                  // .then(voices => console.log(voices));
+                })
+                .catch((err) => {
+                  console.log("OCR Error: ", err);
+                })
+                .done();
+   }
   if (!allowed) {
     console.log("You must accept camera permission")
     return (<View style={styles.permissions}>
@@ -127,6 +160,7 @@ export default function App() {
       hiddenControls: [],
       colors: undefined,
     });
+    ocrRecognize();
     //setData({});
     return (
       <React.Fragment>
@@ -157,6 +191,8 @@ export default function App() {
       </TouchableOpacity>
     </React.Fragment>
   )
+
+
 }
 
 const styles = StyleSheet.create({

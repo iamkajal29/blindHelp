@@ -89,6 +89,8 @@ target 'Project' do
 
   pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
 
+  pod 'TextToSpeech', :path => '../node_modules/react-native-tts'
+
   target 'ProjectTests' do
     inherit! :complete
     # Pods for testing

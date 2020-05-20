@@ -1,4 +1,8 @@
 rootProject.name = 'Project'
+include ':react-native-tts'
+project(':react-native-tts').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tts/android')
+include ':react-native-tesseract-ocr'
+project(':react-native-tesseract-ocr').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tesseract-ocr/android')
 include ':react-native-permissions'
 project(':react-native-permissions').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-permissions/android')
 include ':@woonivers_react-native-document-scanner'
