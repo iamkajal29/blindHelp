@@ -113,7 +113,7 @@ export default function App() {
 
    function ocrRecognize() {
         const tessOptions = {
-                whitelist: null,
+                whitelist: 'qwertyuiopasdfghjklzxcvbnm1234567890',
                 blacklist: '\'!"#$%&()={}[]+*_:;<>@\.\\'
                 // blacklist:null
               };
