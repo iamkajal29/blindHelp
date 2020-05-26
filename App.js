@@ -82,6 +82,12 @@ import { RNPhotoEditor } from 'react-native-photo-editor';
 import RNTesseractOcr from 'react-native-tesseract-ocr';
 import Tts from 'react-native-tts';
 
+//Tts.engines().then(engines => console.log(engines));
+//Tts.voices().then(voices => console.log(voices));
+
+Tts.setDefaultLanguage('en-IN')
+Tts.setDefaultVoice('en-in-x-cxx#female_1-local')
+
 export default function App() {
   const pdfScannerElement = useRef(null)
   const [data, setData] = useState({})
@@ -113,7 +119,7 @@ export default function App() {
 
    function ocrRecognize() {
         const tessOptions = {
-                whitelist: 'qwertyuiopasdfghjklzxcvbnm1234567890',
+                whitelist: 'qwertyuiopasdfghjklzxcvbnm1234567890/-\.ABCDEFGHIJKLMNOPQRSTUVWXY()',
                 blacklist: '\'!"#$%&()={}[]+*_:;<>@\.\\'
                 // blacklist:null
               };
@@ -125,15 +131,16 @@ export default function App() {
                 .then((result) => {
 //                  this.setState({ ocrResult: result });
                   console.log("OCR Result: ", result);
-                  Tts.setDefaultLanguage('en-IN');
-                  Tts.setDefaultVoice('en-in-x-ahp#female_1-local');
-                  Tts.speak("hello world", {
-                    androidParams: {
-                      KEY_PARAM_PAN: -1,
-                      KEY_PARAM_VOLUME: 0.5,
-                      KEY_PARAM_STREAM: 'STREAM_MUSIC',
-                    },
-                  })
+//                  Tts.setDefaultLanguage('en-IN');
+//                  Tts.setDefaultVoice('en-in-x-ahp#female_1-local');
+                    Tts.getInitStatus().then( Tts.speak(result, {
+                                                                 androidParams: {
+                                                                   KEY_PARAM_PAN: -1,
+                                                                   KEY_PARAM_VOLUME: 0.5,
+                                                                   KEY_PARAM_STREAM: 'STREAM_MUSIC',
+                                                                 },
+                                                               })
+                 )
                   // .then(voices => console.log(voices));
                 })
                 .catch((err) => {
